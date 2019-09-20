@@ -1,3 +1,4 @@
+import os
 import logging
 from logging import handlers
 
@@ -9,6 +10,7 @@ from logging import handlers
 
 class Log:
     def __init__(self):        
+        os.mkdir(os.getcwd() + '/debug')
         self.logger = logging.getLogger(__name__)
         if not len(self.logger.handlers):
             c_handler = logging.StreamHandler()
@@ -30,19 +32,3 @@ class Log:
 
     def getLogger(self):
         return self.logger
-
-def mkdir(d):
-    log.debug(f'Creating the directory {d} ...')
-    
-    if os.path.isdir(d):
-        log.debug(f'Directory already exists.')
-    else:
-        try:
-            os.mkdir(d)
-        except OSError as e:
-            log.error(e)
-            log.debug(f'Failed.')
-        else:
-            log.debug(f'Success.')
-
-mkdir('/debug')
