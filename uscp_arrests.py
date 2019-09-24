@@ -26,14 +26,7 @@
 # * Implement emails w/ function
 # * YAML/cron
 
-# In[1]:
-
-
-# Install dependencies
-get_ipython().system('pip3 install pdfplumber pandas requests csvs-to-sqlite datasette beautifulsoup4')
-
-
-# In[2]:
+# In[ ]:
 
 
 # External dependencies
@@ -59,7 +52,7 @@ from urllib.error import URLError
 log = Log().getLogger()
 
 
-# In[3]:
+# In[ ]:
 
 
 base_url = 'https://www.uscp.gov'
@@ -83,7 +76,7 @@ def mkdir(d):
             log.debug(f'Success.')
 
 
-# In[4]:
+# In[ ]:
 
 
 # Get the HTML and download the PDFs 
@@ -131,7 +124,7 @@ def download(site):
     return pdfs
 
 
-# In[5]:
+# In[ ]:
 
 
 # Parse the downloaded PDFs
@@ -167,7 +160,7 @@ def parse_pdf(pdfs):
     return rows
 
 
-# In[6]:
+# In[ ]:
 
 
 # Parse each chunk/row to cols then dataframe
@@ -217,7 +210,7 @@ def parse_row(rows):
     return df
 
 
-# In[7]:
+# In[ ]:
 
 
 # Make a CSV with datetime label that goes in the csv dir
@@ -234,7 +227,7 @@ def mkcsv(df):
     return csv
 
 
-# In[8]:
+# In[ ]:
 
 
 # Put it all in a datasette and 'publish'

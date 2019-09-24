@@ -10,7 +10,20 @@ from logging import handlers
 
 class Log:
     def __init__(self):        
-        os.mkdir(os.getcwd() + '/debug')
+        folder = '/debug'
+        print(f'Creating the directory {folder} ...')
+    
+        if os.path.isdir(os.getcwd() + folder):
+            print('Directory exists.')
+        else:
+            try:
+                os.mkdir(os.getcwd() + folder)
+            except OSError as e:
+                print(e)
+                print('Failed.')
+            else:
+                print('Success.')
+
         self.logger = logging.getLogger(__name__)
         if not len(self.logger.handlers):
             c_handler = logging.StreamHandler()
