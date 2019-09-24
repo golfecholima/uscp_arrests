@@ -9,7 +9,7 @@ Thanks to Mike Stucka for this great tutorial
 * Run `python3 uscp_arrests.py` or `jupyter notebook uscp_arrests.ipynb from the terminal`
 * Visit `http://127.0.0.1:8001/uscp_arrests`
 
-### Things used:
+### Things used
 * [requests](https://2.python-requests.org/en/master/)
 * [pdfplumber](https://github.com/jsvine/pdfplumber)
 * [pandas](https://pandas.pydata.org)
@@ -20,7 +20,7 @@ Thanks to Mike Stucka for this great tutorial
 
 ### Here's where the arrest reports [live](https://www.uscp.gov/media-center/weekly-arrest-summary).
 
-### To do:
+### To do
 * ~~Refine datasette:~~
     * ~~SQLite apparently infers that number an int, should stay string in case of leading zeros. (This apparently might not be possible.) Fixed w/ --shape.~~
 * ~~Functionify dir creation~~
