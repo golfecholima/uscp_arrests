@@ -1,3 +1,9 @@
+# Log files, downloads, db
+/reports
+/debug
+/db
+/csv
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
