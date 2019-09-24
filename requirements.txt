@@ -1,0 +1,4 @@
+requests==2.22.0
+pdfplumber==0.5.12
+pandas==0.24.2
+beautifulsoup4==4.8.0
